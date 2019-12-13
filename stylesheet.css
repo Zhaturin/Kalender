@@ -1,0 +1,18 @@
+nav{
+    overflow: hidden;
+    background-color: Black;
+    float: left;
+    display: block;
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+    text-decoration: none;
+}
+nav a:hover{
+    background-color: grey;
+    color: red;
+}
+nav a:active{
+    background-color: red;
+    color: grey;
+}
