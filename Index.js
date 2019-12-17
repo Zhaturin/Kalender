@@ -1,7 +1,6 @@
 var i; // Loopvariable
 
 function init() {
-    console.log('dwdawdaw');
     initUI();
 }
 
@@ -39,13 +38,6 @@ function initUI() {
         item.innerText = itemList[i];
         ul.appendChild(item);
     }
-    
-
- /*   let li1 = document.createElement('li');
-    li1.innerText = ('hej');
-    ul.appendChild(li1);*/
-    
-
     // main
     let main = document.createElement('main');
     main.id = 'main-container';
