@@ -33,7 +33,6 @@ function initUI() {
     let itemList = ['New activity', 'Calendar'];
 
     for(i = 0; i < itemList.length; i++) {
-        console.log(itemList[i]);
         let item = document.createElement('li');
         item.innerText = itemList[i];
         ul.appendChild(item);
