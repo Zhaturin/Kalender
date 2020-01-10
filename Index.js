@@ -7,29 +7,49 @@ function init() {
 
 function displayActivity() { 
     
-    let actH2 = document.getElementById('main-h2');
-    actH2.innerText = 'New activity';
+    let activityH2 = document.getElementById('main-h2');
+    activityH2.innerText = 'New activity';
 
     let formContainer = document.createElement('div');
     formContainer.id = 'form-container';
     document.getElementById('main-container').appendChild(formContainer);
 
-    let divText = document.createElement('div');
+    /*let divText = document.createElement('div');
     divText.className = 'textarea';
-    divText.innerText = 'Add an new activity:';
-    formContainer.appendChild(divText);
+    divText.innerText = 'Add a new activity:';
+    formContainer.appendChild(divText);*/
 
     // form
-    let actForm = document.createElement('form');
-    formContainer.appendChild(actForm);
+    let activityForm = document.createElement('form');
+    formContainer.appendChild(activityForm);
 
-    let newActivity = document.createElement('input');
-    newActivity.placeholder = 'Activity name...';
-    actForm.appendChild(newActivity);
+    let labelActivity = document.createElement('label');
+    labelActivity.innerText = 'Title:';
+    activityForm.appendChild(labelActivity);
 
-    let newActivityDate = document.createElement('input');
-    
+    let inputActivity = document.createElement('input');
+    inputActivity.placeholder = 'Activity name...';
+    inputActivity.type = 'text';
+    activityForm.appendChild(inputActivity);
 
+    let labelDate = document.createElement('label');
+    labelDate.innerText = 'Date:';
+    activityForm.appendChild(labelDate);
+
+    let inputDate = document.createElement('input');
+    inputDate.id = 'input-date';
+    inputDate.type = 'date';
+    activityForm.appendChild(inputDate);
+
+    let labelDescription = document.createElement('label');
+    labelDescription.innerText = 'Description:';
+    activityForm.appendChild(labelDescription);
+
+    let textDescription = document.createElement('textarea');
+    textDescription.rows = 10;
+    textDescription.cols = 45;
+    textDescription.maxlength = 500;
+    activityForm.appendChild(textDescription);
 }
 
 function initUI() {
