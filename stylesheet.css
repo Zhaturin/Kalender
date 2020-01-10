@@ -36,6 +36,7 @@ li {
     list-style-type: none;
     font-size: 20px;
     padding: 10px;
+    cursor: pointer;
 }
 
 #main-container {
@@ -47,4 +48,17 @@ h2 {
     color: #FFF;
     font-family: 'Roboto', sans-serif;
     padding: 25px;
+}
+
+.textarea {
+    color: #FFF;
+    font-family: 'Roboto', sans-serif;
+    padding: 30px;
+}
+
+#form-container {
+    background-color: #303a44;
+    width: 80%;
+    height: 60%;
+    margin: 25px;
 }
