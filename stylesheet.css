@@ -34,7 +34,7 @@ li {
     color: #FFF;
     font-family: 'Roboto', sans-serif;
     list-style-type: none;
-    font-size: 20px;
+    font-size: 22px;
     padding: 10px;
     cursor: pointer;
 }
@@ -47,7 +47,7 @@ li {
 h2 {
     color: #FFF;
     font-family: 'Roboto', sans-serif;
-    padding: 25px;
+    padding: 30px;
     font-size: 30px;
 }
 
@@ -61,32 +61,44 @@ h2 {
 
 #form-container {
     background-color: #303a44;
-    width: 80%;
-    height: 60%;
-    margin: 25px;
-    padding-top: 25px;
+    width: 40%;
+    height: 55%;
+    margin: 30px;
+    padding-top: 40px;
 }
 
 label {
     color: #FFF;
     font-family: 'Roboto', sans-serif;
-    padding: 30px;
+    padding: 40px;
     font-size: 14px;
 }
 
-input {
+#input-activity, #input-date, textarea {
     display: block;
-    margin: 5px 30px 20px;
+    margin: 5px 40px 20px;
     padding: 3px;
+}
+
+#input-activity {
     width: 240px;
 }
 
 #input-date {
     width: 120px;
-    text-align: center;
 }
 
-textarea {
-    display: block;
-    margin: 5px 30px 20px;
+#form-btn {
+    float: right;
+    margin-right: 50px;
+    padding: 10px;
+    width: 120px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.575);
+    border: 1px solid #000;
+    cursor: pointer;
+}
+
+#form-btn:hover {
+    background-color: rgba(255, 255, 255, 0.877);
 }

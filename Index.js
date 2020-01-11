@@ -14,26 +14,21 @@ function displayActivity() {
     formContainer.id = 'form-container';
     document.getElementById('main-container').appendChild(formContainer);
 
-    /*let divText = document.createElement('div');
-    divText.className = 'textarea';
-    divText.innerText = 'Add a new activity:';
-    formContainer.appendChild(divText);*/
-
-    // form
+    // form -- CORRECT THE SEMANTIC AND POSITION LATER
     let activityForm = document.createElement('form');
     formContainer.appendChild(activityForm);
 
     let labelActivity = document.createElement('label');
-    labelActivity.innerText = 'Title:';
+    labelActivity.innerText = 'Title: *';
     activityForm.appendChild(labelActivity);
 
     let inputActivity = document.createElement('input');
-    inputActivity.placeholder = 'Activity name...';
+    inputActivity.id = 'input-activity';
     inputActivity.type = 'text';
     activityForm.appendChild(inputActivity);
 
     let labelDate = document.createElement('label');
-    labelDate.innerText = 'Date:';
+    labelDate.innerText = 'Date: *';
     activityForm.appendChild(labelDate);
 
     let inputDate = document.createElement('input');
@@ -46,10 +41,25 @@ function displayActivity() {
     activityForm.appendChild(labelDescription);
 
     let textDescription = document.createElement('textarea');
+    textDescription.placeholder = 'Describe your activity...';
     textDescription.rows = 10;
     textDescription.cols = 45;
     textDescription.maxlength = 500;
     activityForm.appendChild(textDescription);
+
+    let mybr = document.createElement('br');
+    activityForm.appendChild(mybr);
+
+    let reqFields = document.createElement('label');
+    reqFields.innerText = '*  Required fields';
+    activityForm.appendChild(reqFields);
+
+    // form submit button
+    let formSubmitBtn = document.createElement('input');
+    formSubmitBtn.id = 'form-btn';
+    formSubmitBtn.value = 'Submit';
+    formSubmitBtn.type = 'submit';
+    activityForm.appendChild(formSubmitBtn);
 }
 
 function initUI() {
