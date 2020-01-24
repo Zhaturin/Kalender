@@ -2,10 +2,10 @@ var i; // Loopvariable
 
 function init() {
     initUI();
-    displayActivity();
+    addActivity();
 }
 
-function displayActivity() { 
+function addActivity() { 
     
     let activityH2 = document.getElementById('main-h2');
     activityH2.innerText = 'New activity';
@@ -14,7 +14,7 @@ function displayActivity() {
     formContainer.id = 'form-container';
     document.getElementById('main-container').appendChild(formContainer);
 
-    // form -- CORRECT THE SEMANTIC AND POSITION LATER
+    // form
     let activityForm = document.createElement('form');
     formContainer.appendChild(activityForm);
 
@@ -25,7 +25,7 @@ function displayActivity() {
     let inputActivity = document.createElement('input');
     inputActivity.id = 'input-activity';
     inputActivity.type = 'text';
-    activityForm.appendChild(inputActivity);
+    labelActivity.appendChild(inputActivity);
 
     let labelDate = document.createElement('label');
     labelDate.innerText = 'Date: *';
@@ -34,7 +34,25 @@ function displayActivity() {
     let inputDate = document.createElement('input');
     inputDate.id = 'input-date';
     inputDate.type = 'date';
-    activityForm.appendChild(inputDate);
+    labelDate.appendChild(inputDate);
+
+    let labelStartTime = document.createElement('label');
+    labelStartTime.innerText = 'Start time:';
+    labelStartTime.className = 'label-startend';
+    activityForm.appendChild(labelStartTime);
+
+    let inputStartTime = document.createElement('input');
+    inputStartTime.type = 'time';
+    labelStartTime.appendChild(inputStartTime);
+
+    let labelEndTime = document.createElement('label');
+    labelEndTime.innerText = 'End time:';
+    labelEndTime.className = 'label-startend';
+    activityForm.appendChild(labelEndTime);
+
+    let inputEndTime = document.createElement('input');
+    inputEndTime.type = 'time';
+    labelEndTime.appendChild(inputEndTime);
 
     let labelDescription = document.createElement('label');
     labelDescription.innerText = 'Description:';
@@ -45,7 +63,7 @@ function displayActivity() {
     textDescription.rows = 10;
     textDescription.cols = 45;
     textDescription.maxlength = 500;
-    activityForm.appendChild(textDescription);
+    labelDescription.appendChild(textDescription);
 
     let mybr = document.createElement('br');
     activityForm.appendChild(mybr);
@@ -60,6 +78,13 @@ function displayActivity() {
     formSubmitBtn.value = 'Submit';
     formSubmitBtn.type = 'submit';
     activityForm.appendChild(formSubmitBtn);
+    formSubmitBtn.addEventListener('click', addDisplay);
+
+    // NOT DONE YET !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    function addDisplay(e) {
+        var display = document.createElement('div');
+        display.className = 'display-items';
+    }
 }
 
 function initUI() {
