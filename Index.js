@@ -1,10 +1,11 @@
 var i; // Loopvariable
-var activeScreen = 0;
+var activeScreen = 0; //
 
 function init() {
     initUI();       // Grafiska element
     createLogin();  // Kallar login.js
     createModal();  // Kallar login.js
+}
 
 function initUI() {
     // header
