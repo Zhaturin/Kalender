@@ -5,6 +5,7 @@ function init() {
     initUI();       // Grafiska element
     createLogin();  // Kallar login.js
     createModal();  // Kallar login.js
+}
 
 function initUI() {
     // header
