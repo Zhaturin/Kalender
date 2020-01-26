@@ -1,5 +1,5 @@
 var i; // Loopvariable
-var activeScreen = 0;
+var activeScreen = 0; //
 
 function init() {
     initUI();       // Grafiska element
